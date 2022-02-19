@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Starter Kit SCSS</title>
+        <title>Nivo Slider</title>
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,22 +16,99 @@
 
         <!-- stylesheets -->
         <link rel="stylesheet" href="./css/reset.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./css/nivo-slider.css" />
         <link rel="stylesheet" href="./css/styles.css" />
 
         <!-- scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./js/jquery.nivo.slider.js"></script>
+        <script src="./js/jquery.nivo.slider.pack.js"></script>
         <script src="./js/main.js" defer></script>
     </head>
     <body>
         <div class="container">
-            <header></header>
+            <header>
+                <h1>Nivo Slider</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Info</a></li>
+                    </ul>
+                </nav>
+            </header>
             <main>
-                <h1>Starter SASS Template</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perferendis fugiat ipsa veritatis ducimus, maxime molestias
-                    quas minima recusandae, illum ipsum vitae odio perspiciatis
-                    quam aspernatur ex nulla repudiandae dicta? Necessitatibus.
-                </p>
+                <div class="main-page">
+                    <div class="main-content">
+                        <div class="slider-area">
+                            <div class="slider-wrapper">
+                                <div class="slider-active">
+                                    <img
+                                        src="img/1.jpg"
+                                        alt=""
+                                        title="#slider-content-1"
+                                    />
+                                    <img src="img/2.jpg" alt="" />
+                                    <img
+                                        src="img/3.jpg"
+                                        alt=""
+                                        title="#slider-content-3"
+                                    />
+                                </div>
+                                <div
+                                    class="slider-content"
+                                    id="slider-content-1"
+                                >
+                                    <div class="slider-description">
+                                        <div class="slider-bg">
+                                            <p>
+                                                Thanks for vising my Nivo Slider
+                                                Project!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="slider-content"
+                                    id="slider-content-3"
+                                >
+                                    <div class="slider-description">
+                                        <div class="slider-bg">
+                                            <h2>Welcome</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar">
+                        <div class="sidebar-item-1">
+                            <h3>SideBar Heading</h3>
+                            <p>Sub Heading</p>
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                |
+                                <li><a href="#">Link 2</a></li>
+                                |
+                                <li><a href="#">Link 3</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-item-2">
+                            <h3>SideBar Heading</h3>
+                            <p>Sub Heading</p>
+                            <ul>
+                                <li><a href="#"> Link 1</a></li>
+                                <li><a href="#"> Link 2</a></li>
+                                <li><a href="#"> Link 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer></footer>
         </div>

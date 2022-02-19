@@ -1,3 +1,10 @@
+// Variable
+$dark: #212121;
+$light: #eeeeee;
+$primary: #007fff;
+$common-padding: 1.6rem;
+$common-margin: 1.6rem;
+
 :root,
 html {
     font-size: 62.5%;
@@ -8,6 +15,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 1.6rem;
     font-size: 16px; /* fallback */
+    background-color: $dark;
 }
 
 h1 {
@@ -28,8 +36,139 @@ h3 {
     font-weight: bold;
 }
 
-// styles
+// main styles
 .container {
     max-width: 160rem;
-    margin: 0 auto;
+    margin: 3rem auto;
+    background-color: $light;
+    border-radius: 0.5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2rem solid $dark;
+    padding: $common-padding;
+    nav {
+        ul {
+            display: flex;
+            gap: 1.6rem;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $dark;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    transition: 0.2s;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-page {
+    display: flex;
+    .main-content {
+        width: 100%;
+        padding: $common-padding;
+        #accordion {
+            margin-bottom: $common-margin;
+        }
+    }
+    .sidebar {
+        min-width: 28.9rem;
+        border-left: 0.2rem solid $dark;
+        padding: $common-padding;
+        .sidebar-item-1,
+        .sidebar-item-2 {
+            margin-bottom: $common-margin;
+            h3 {
+                padding: $common-padding;
+                background-color: $primary;
+                text-align: center;
+                color: $light;
+                border-radius: 0.5rem;
+                margin-bottom: $common-margin;
+            }
+            p {
+                margin-bottom: 1rem;
+            }
+            ul {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                li {
+                    a {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .sidebar-item-2 {
+            ul {
+                display: block;
+                li {
+                    margin-bottom: 0.5rem;
+                    &::before {
+                        content: "-";
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slider-wrapper {
+    .slider-active {
+        img {
+            width: 100%;
+        }
+    }
+    .slider-content {
+        display: none;
+        .slider-description {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            .slider-bg {
+                background: rgba(0, 0, 0, 0.5);
+                padding: 5rem;
+            }
+        }
+    }
+}
+
+.nivo-caption {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+// slider control button
+.nivo-controlNav {
+    position: relative;
+    width: 100%;
+    z-index: 99;
+    transition: 0.4s;
+    a {
+        width: 5rem;
+        height: 1.2rem;
+        margin: 0 0.5rem;
+        background: $dark;
+        display: inline-block;
+        text-indent: -9999.9rem;
+        transition: 0.4s;
+        &:hover,
+        &:active {
+            background: rgba(255, 255, 255, 0.8);
+        }
+    }
 }
